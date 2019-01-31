@@ -1,0 +1,5 @@
+[user]
+	email = contact@alexandre-hublau.com
+	name = xandermann
+[branch]
+	autosetuprebase = always

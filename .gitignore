@@ -1,0 +1,42 @@
+# BASICS
+/*
+!.gitignore
+
+
+!/.config
+/.config/*
+
+#######################################################################################
+
+
+!.Xmodmap
+!README.md
+!.config/redshift.conf
+!.gitconfig
+
+
+#######################################################################################
+
+
+
+#######################################################################################
+# Sublime Text
+#######################################################################################
+## Go into sublime-text folder
+!/.config/sublime-text-3
+/.config/sublime-text-3/*
+
+# Garder le plugin Package Control uniquement
+!/.config/sublime-text-3/Installed Packages/
+/.config/sublime-text-3/Installed Packages/*
+!/.config/sublime-text-3/Installed Packages/Package Control.sublime-package
+
+# Garder les raccourcis clavier, les préférences et les builds
+!/.config/sublime-text-3/Packages/
+/.config/sublime-text-3/Packages/*
+!/.config/sublime-text-3/Packages/User/
+/.config/sublime-text-3/Packages/User/*
+!/.config/sublime-text-3/Packages/User/*.sublime-keymap
+!/.config/sublime-text-3/Packages/User/*.sublime-settings
+!/.config/sublime-text-3/Packages/User/*.sublime-build
+#######################################################################################

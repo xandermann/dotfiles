@@ -1,0 +1,24 @@
+[
+
+	// Basics
+	{ "keys": ["ctrl+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["ctrl+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+
+	// Code
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+	{ "keys": ["ctrl+q"], "command": "expand_selection", "args": {"to": "word"} },
+	{"keys": ["ctrl+shift+f"], "command": "reindent", "args": {"single_line": false}},
+
+	{ "keys": ["ctrl+up"], "command": "scroll_lines", "args": {"amount": 1.0 } },
+	{ "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -1.0 } },
+
+	// Tool
+	{ "keys": ["ctrl+k"], "command": "toggle_setting", "args": {"setting": "spell_check"} },
+	{ "keys": ["ctrl+l"], "command": "toggle_side_bar" },
+	{ "keys": ["ctrl+d", "ctrl+f"], "command": "toggle_distraction_free" },
+
+	// Plugin
+	{ "keys": ["ctrl+alt+n"], "command": "advanced_new_file_new"}
+
+	]

@@ -14,6 +14,22 @@
 	{ "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -1.0 } },
 
 	// Tool
+	//
+	// "command": "build", {"args": {"build_system": "Packages/LaTeXTools/LaTeX.sublime-build", "variant": "", "choice_build_system": true, "choice_variant": true}
+	//{ "keys": ["ctrl+j"], "command": "build", "args": {} },
+	//
+
+	{
+		"keys": ["ctrl+j"], "command": "build",
+		"args": {
+			"build_system": "Packages/User/js.sublime-build",
+			"variant": "",
+			"choice_build_system": true,
+			"choice_variant": true
+		}
+	},
+
+
 	{ "keys": ["ctrl+k"], "command": "toggle_setting", "args": {"setting": "spell_check"} },
 	{ "keys": ["ctrl+l"], "command": "toggle_side_bar" },
 	{ "keys": ["ctrl+d", "ctrl+f"], "command": "toggle_distraction_free" },
@@ -21,4 +37,4 @@
 	// Plugin
 	{ "keys": ["ctrl+alt+n"], "command": "advanced_new_file_new"}
 
-	]
+]

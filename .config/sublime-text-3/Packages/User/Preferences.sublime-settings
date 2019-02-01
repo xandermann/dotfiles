@@ -8,6 +8,7 @@
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
 	"margin": -1,
+	"show_errors_inline": false,
 	"theme": "Material Stereokai.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,

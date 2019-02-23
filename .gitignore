@@ -14,9 +14,9 @@
 !.config/redshift.conf
 !.gitconfig
 
-!/Images
-/Images/*
-!/Images/*
+!/Pictures
+/Pictures/*
+!/Pictures/user.png
 
 #######################################################################################
 

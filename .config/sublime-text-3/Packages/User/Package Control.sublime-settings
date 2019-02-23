@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"AdvancedNewFile",
+		"AutoFileName",
 		"Babel",
 		"DocBlockr",
 		"Emmet",
@@ -15,6 +16,8 @@
 		"INI",
 		"Materialize",
 		"Package Control",
+		"Sass",
+		"SublimeLinter",
 		"Terminal"
 	]
 }

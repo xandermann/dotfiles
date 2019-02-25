@@ -32,7 +32,7 @@
 
 	{ "keys": ["ctrl+k"], "command": "toggle_setting", "args": {"setting": "spell_check"} },
 	{ "keys": ["ctrl+l"], "command": "toggle_side_bar" },
-	{ "keys": ["ctrl+d", "ctrl+f"], "command": "toggle_distraction_free" },
+	{ "keys": ["ctrl+e"], "command": "toggle_distraction_free" },
 
 	// Plugin
 	{ "keys": ["ctrl+alt+n"], "command": "advanced_new_file_new"}

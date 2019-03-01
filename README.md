@@ -45,6 +45,9 @@ ___________________________________________________________
 
 ## FIXES:
 
+### XPS
+https://github.com/erpalma/throttled
+
 ### LIGHT:
 
 * Sound:

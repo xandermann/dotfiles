@@ -1,7 +1,7 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/Materialize/schemes/Material Stereokai.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Fira Code",
 	"font_size": 18,

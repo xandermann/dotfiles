@@ -92,18 +92,11 @@ ___________________________________________________________
 	sudo service mysql restart
 	sudo mysql # logs in automatically into MariaDB
 	use mysql;
-	update user set plugin='' where user='your_user_name';
+	update user set plugin='' where user='root';
+	SET PASSWORD FOR root@'localhost' = PASSWORD('root');
 	flush privileges;
 	exit;
 	sudo service mysql restart # restarts the mysql service
 
 
 
-	UPDATE
-	  mysql.user
-	SET
-	  Password = PASSWORD('root')
-	WHERE
-	  User = 'root';
-	FLUSH PRIVILEGES;
-	exit;

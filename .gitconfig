@@ -2,28 +2,25 @@
 	email = contact@alexandre-hublau.com
 	name = xandermann
 [branch]
-	autosetuprebase = always
+	autosetupmerge = always
 
 [credential]
   helper = xandermann
 [core]
   editor = vim -c start
   excludesfile = ~/.gitignore_global
+
 [alias]
-# add
-  aa = add .
-  ap = add --patch
-
-# commit
-  cm = commit -a
-# status
   s = status
+  aa = add .
+  cm = commit -a
+  amend = commit --amend
+  p = push
 
-# log
-  lg = vlog --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+  undo = git reset --soft HEAD^
+  who = shortlog -sne
+  oneline = log --pretty=oneline --abbrev-commit --graph --decorate
 
-# push
-  p = push                         # push
 
 [diff]
 compactionHeuristic = true

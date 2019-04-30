@@ -33,6 +33,8 @@ ___________________________________________________________
 `Chromium keepassxc redshift-gtk sublime-text veracrypt`
 Font `fonts-firacode`
 
+	sudo apt install ttf-mscorefonts-installer
+
 ### Dev
 
 `eclipse-java composer npm git ruby`

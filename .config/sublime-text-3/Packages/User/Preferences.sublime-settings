@@ -1,10 +1,10 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Materialize/schemes/Material Facebook.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Fira Code",
-	"font_size": 18,
+	"font_size": 12,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -17,7 +17,7 @@
 	"save_on_focus_lost": true,
 	"shift_tab_unindent": true,
 	"show_errors_inline": false,
-	"theme": "Material Stereokai.sublime-theme",
+	"theme": "Material Facebook.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
 	"word_wrap": true

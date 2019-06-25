@@ -24,6 +24,11 @@ Cache `ssh-agent ssh-add`
 `git config --global user.email "contact@alexandre-hublau.com"`
 `git config --global branch.autosetuprebase always`
 
+
+# I3 mouse fix
+
+	xinput --set-prop "DELL08AF:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 1
+
 ___________________________________________________________
 
 ## Package list:

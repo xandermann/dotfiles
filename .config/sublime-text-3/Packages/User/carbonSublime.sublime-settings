@@ -1,0 +1,16 @@
+{
+  //"background-color": "#B8D9FD",
+  "background-color": "#FFF",
+  "theme": "material",
+  "font-family": "Hack",
+  "drop-shadow": "false",
+  "window-controls": "true",
+  "width-adjustment": "true",
+  //"padding-vertical": "48px",
+  "padding-vertical": "0",
+  //"padding-horizontal": "32px",
+  "padding-horizontal": "0",
+  "line-numbers": "true",
+  "language_mapping": {},
+  "trim_indent": true
+}

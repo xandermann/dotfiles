@@ -1,10 +1,10 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/Materialize/schemes/Material Facebook.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Fira Code",
-	"font_size": 12,
+	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":

@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"AdonisJs",
 		"AdvancedNewFile",
 		"AutoFileName",
 		"Babel",
@@ -24,6 +25,7 @@
 		"Materialize",
 		"Package Control",
 		"Sass",
+		"StandardFormat",
 		"SublimeLinter",
 		"Terminal",
 		"TypeScript Syntax",

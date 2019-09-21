@@ -12,6 +12,10 @@ Scan network:
 
 	nmap -sn 192.168.1.0/24
 
+## Chromium history
+
+In `/home/alex/snap/chromium/current/.config/chromium/Default`, put the file `History` in read only.
+
 ## Replace the key ² with: \`:
 1. `xmodmap -pke > ~/.Xmodmap` > Create the key map
 2. `~/.Xmodmap` > Change 'twosuperior' with 'grave' (l49)

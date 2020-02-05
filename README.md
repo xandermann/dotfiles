@@ -109,5 +109,6 @@ ___________________________________________________________
 	exit;
 	sudo service mysql restart # restarts the mysql service
 
+# Bash not displayed
 
-
+	chsh -s /bin/bash

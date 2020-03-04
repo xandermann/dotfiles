@@ -4,11 +4,17 @@ ___________________________________________________________
 
 ___________________________________________________________
 
-Install image:
+## Keyboard
+
+	setxkbmap fr azerty
+	setxkbmap fr bepo
+
+
+## Install image:
 
 	sudo dd bs=1M if=~/Downloads/s.img of=/dev/sda status=progress conv=fsync
 
-Scan network:
+## Scan network:
 
 	nmap -sn 192.168.1.0/24
 

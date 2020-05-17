@@ -9,7 +9,7 @@
 [core]
   editor = vim -c start
   excludesfile = ~/.gitignore_global
-	hooksPath = /home/alex/git/git-hooks
+	hooksPath = /home/alex/git/hooks
 
 [alias]
   s = status

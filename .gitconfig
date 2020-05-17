@@ -9,6 +9,7 @@
 [core]
   editor = vim -c start
   excludesfile = ~/.gitignore_global
+	hooksPath = /home/alex/git/git-hooks
 
 [alias]
   s = status
@@ -16,6 +17,7 @@
   cm = commit -a
   amend = commit --amend
   p = push
+  pu = pull
 
   undo = git reset --soft HEAD^
   who = shortlog -sne

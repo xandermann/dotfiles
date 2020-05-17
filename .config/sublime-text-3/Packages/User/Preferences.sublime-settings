@@ -1,10 +1,10 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "solid",
-	"color_scheme": "Packages/Materialize/schemes/Material Facebook.tmTheme",
+	"color_scheme": "Packages/Materialize/schemes/Material Spaceblack Oceanic.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
-	"font_face": "Fira Code",
-	"font_size": 21,
+	"font_face": "JetBrains Mono",
+	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -14,10 +14,11 @@
 	"line_padding_bottom": 2,
 	"line_padding_top": 8,
 	"margin": -1,
-	"save_on_focus_lost": true,
+	"save_on_focus_lost": false,
 	"shift_tab_unindent": true,
 	"show_errors_inline": false,
-	"theme": "Material Facebook.sublime-theme",
+	"tab_size": 2,
+	"theme": "Material Spaceblack.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
 	"word_wrap": true

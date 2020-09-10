@@ -1,6 +1,6 @@
 [user]
 	email = contact@alexandre-hublau.com
-	name = xandermann
+	name = Alexandre HUBLAU
 [branch]
 	autosetupmerge = always
 
@@ -26,3 +26,5 @@
 
 [diff]
 compactionHeuristic = true
+[commit]
+	gpgsign = true

@@ -44,8 +44,4 @@
 !/.config/sublime-text-3/Packages/User/*.sublime-settings
 !/.config/sublime-text-3/Packages/User/*.sublime-build
 
-# https://stackoverflow.com/questions/50476287/syntax-highlighting-for-html-inside-x-template-script-tags-in-sublime-text-3
-!/.config/sublime-text-3/Packages/User/HTML-Vue.sublime-syntax
-
-
 #######################################################################################

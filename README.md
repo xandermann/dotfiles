@@ -114,7 +114,6 @@ Change the path
 
 ___________________________________________________________
 
-
 	sudo service mysql restart
 	sudo mysql # logs in automatically into MariaDB
 	use mysql;
@@ -127,3 +126,19 @@ ___________________________________________________________
 # Bash not displayed
 
 	chsh -s /bin/bash
+	
+# Docker info - swap memory
+
+    You can enable these capabilities on Ubuntu or Debian by following these instructions. Memory and swap accounting incur an overhead of about 1% of the total available memory and a 10% overall performance degradation, even if Docker is not running.
+
+    1) Log into the Ubuntu or Debian host as a user with sudo privileges.
+
+    2) Edit the /etc/default/grub file. Add or edit the GRUB_CMDLINE_LINUX line to add the following two key-value pairs:
+
+    GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
+
+    3) Update GRUB.
+
+    $ sudo update-grub
+
+[https://ubuntuplace.info/questions/313645/docker-warning-no-swap-limit-support](https://ubuntuplace.info/questions/313645/docker-warning-no-swap-limit-support)

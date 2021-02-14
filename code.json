@@ -1,0 +1,79 @@
+{
+  "editor.mouseWheelZoom": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+
+    // "editor.codeActionsOnSave": {
+    //   "source.fixAll.eslint": true,
+    //   "editor.formatOnSave": false
+    // },
+
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+  },
+
+  "window.zoomLevel": 0,
+  "editor.fontSize": 18,
+  "workbench.startupEditor": "newUntitledFile",
+  //"prettier.printWidth": 120,
+  "terminal.integrated.shell.windows": "C:\\Users\\KGHB1518\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.fontSize": 20,
+  "miramac.node.showInfo": false,
+  "telemetry.enableTelemetry": false,
+  "update.channel": "none",
+  "extensions.autoUpdate": false,
+  "extensions.ignoreRecommendations": true,
+  "telemetry.enableCrashReporter": false,
+  "git.enableSmartCommit": true,
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Community Material Theme Palenight",
+  "workbench.iconTheme": "material-icon-theme",
+  "browser-preview.startUrl": "localhost:5500",
+  "browser-preview.chromeExecutable": "C:\\Users\\KGHB1518\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+  "liveServer.settings.useBrowserPreview": true,
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.lintTask.enable": true,
+  "breadcrumbs.symbolPath": "off",
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.lineNumbers": "relative",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    }
+  ],
+
+  "vetur.validation.template": false,
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.autoSave": "onFocusChange",
+
+}

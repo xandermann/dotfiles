@@ -12,6 +12,12 @@ ___________________________________________________________
 ## Umask
 
 	umask 077
+	
+## Trimp SSD
+
+	lsblk
+	sudo systemctl enable fstrim.timer
+	systemctl status fstrim.timer
 
 ## Keyboard
 

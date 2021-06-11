@@ -133,6 +133,10 @@ ___________________________________________________________
 
 	chsh -s /bin/bash
 	
+# Hours
+
+	sudo dpkg-reconfigure tzdata
+	
 # Docker info - swap memory
 
     You can enable these capabilities on Ubuntu or Debian by following these instructions. Memory and swap accounting incur an overhead of about 1% of the total available memory and a 10% overall performance degradation, even if Docker is not running.

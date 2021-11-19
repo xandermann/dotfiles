@@ -4,6 +4,50 @@ ___________________________________________________________
 
 ___________________________________________________________
 
+# Installation
+
+	# git config
+	git config --global user.name "Alexandre Hublau"
+	git config --global user.email "alexandre.hublau@orange.com"
+	git config --global core.editor "nano"
+
+	# ssh keys + fix bad permissions
+	cp /mnt/c/Users/KGHB1518/.ssh ~/.ssh/
+	chmod 600 ~/.ssh/id_rsa
+
+	# install docker
+	sudo apt instal docker.io docker-compose -y
+	sudo groupadd docker
+	sudo usermod -aG docker $USER
+	newgrp docker 
+
+	# install vim (do it into your linux home !)
+	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+	sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+	# zsh
+	sudo apt install zsh -y
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	# sudo vim /etc/passwd  <-- to change default shell, but perhaps `chsh` can do it too ! Actually OMZSH do it for you
+
+## Drafts
+
+	# PHP
+	sudo apt install php php-xml
+
+	# Node
+	sudo apt install nodejs npm
+	sudo npm cache clean -f
+	sudo npm install -g n
+	sudo n stable
+	
+	sudo n latest
+
+## Docker
+
+	sudo dockerd # then CTRL+Z 
+	bg
+
 # First lines
 
 	useradd alex
@@ -13,7 +57,7 @@ ___________________________________________________________
 
 	umask 077
 	
-## Trimp SSD
+## Trim SSD
 
 	lsblk
 	sudo systemctl enable fstrim.timer

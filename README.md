@@ -6,22 +6,27 @@ ___________________________________________________________
 
 # Installation
 
-	# git config
+## Standard
+
+	useradd alex
+	usermod -aG sudo alex
+
+	# git
 	git config --global user.name "Alexandre Hublau"
 	git config --global user.email "alexandre.hublau@orange.com"
 	git config --global core.editor "nano"
 
-	# ssh keys + fix bad permissions
+	# ssh
 	cp /mnt/c/Users/KGHB1518/.ssh ~/.ssh/
 	chmod 600 ~/.ssh/id_rsa
 
-	# install docker
+	# docker
 	sudo apt instal docker.io docker-compose -y
 	sudo groupadd docker
 	sudo usermod -aG docker $USER
 	newgrp docker 
 
-	# install vim (do it into your linux home !)
+	# vim
 	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
 
@@ -32,10 +37,10 @@ ___________________________________________________________
 
 ## Drafts
 
-	# PHP
+	# php
 	sudo apt install php php-xml
 
-	# Node
+	# node
 	sudo apt install nodejs npm
 	sudo npm cache clean -f
 	sudo npm install -g n
@@ -43,31 +48,31 @@ ___________________________________________________________
 	
 	sudo n latest
 
-## Docker
+## Run docker
 
-	sudo dockerd # then CTRL+Z 
-	bg
+	sudo dockerd &
 
-# First lines
-
-	useradd alex
-	usermod -aG sudo alex
-
-## Umask
-
-	umask 077
-	
-## Trim SSD
+## Trim SSD (done by default in ubuntu ?)
 
 	lsblk
 	sudo systemctl enable fstrim.timer
 	systemctl status fstrim.timer
-
+	
 ## Keyboard
 
 	setxkbmap fr azerty
 	setxkbmap fr bepo
 
+___________________________________________________________
+___________________________________________________________
+___________________________________________________________
+___________________________________________________________
+___________________________________________________________
+
+
+## Umask
+
+	umask 077
 
 ## Install image:
 
@@ -130,6 +135,7 @@ ___________________________________________________________
 ## FIXES:
 
 ### XPS
+
 https://github.com/erpalma/throttled
 
 ### LIGHT:
@@ -176,7 +182,7 @@ ___________________________________________________________
 # Bash not displayed
 
 	chsh -s /bin/bash
-	
+
 # Hours
 
 	sudo dpkg-reconfigure tzdata

@@ -30,6 +30,7 @@ ___________________________________________________________
 	# vim
 	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
+	# imap jk <Esc>
 
 	# zsh
 	sudo apt install zsh -y
@@ -39,15 +40,22 @@ ___________________________________________________________
 ## Drafts
 
 	# php
-	sudo apt install php php-xml
+	sudo apt install php php-xml composer
 
 	# node
 	sudo apt install nodejs npm
 	sudo npm cache clean -f
 	sudo npm install -g n
-	sudo n stable
+	sudo n stable # sudo n latest
 	
-	sudo n latest
+	sudo apt install chromium keepassxc redshift-gtk sublime-text veracrypt fonts-firacode ttf-mscorefonts-installer
+
+	@TODO
+	* I3
+	* I3 Gaps -> https://github.com/Airblader/i3
+	* Rofi
+	* Compton
+	* lxappearance
 
 ## Run docker
 
@@ -63,8 +71,13 @@ ___________________________________________________________
 
 	setxkbmap fr azerty
 	setxkbmap fr bepo
-	
-# VPS
+		
+## Replace the key ² with: \`:
+	xmodmap -pke > ~/.Xmodmap # Create the key map
+	~/.Xmodmap # Change 'twosuperior' with 'grave' (l49)
+	xmodmap ~/.Xmodmap # and refresh
+
+## VPS
 
 ```diff
 - WARNING: No swap limit support
@@ -90,70 +103,28 @@ ___________________________________________________________
 ___________________________________________________________
 ___________________________________________________________
 
+## FIXES
 
-## Umask
+### Umask
 
 	umask 077
 
-## Install image:
+### Install image:
 
 	sudo dd bs=1M if=~/Downloads/s.img of=/dev/sda status=progress conv=fsync
 
-## Scan network:
+### Scan network:
 
 	nmap -sn 192.168.1.0/24
 
-## Chromium history
+### Chromium history
 
 In `/home/alex/snap/chromium/current/.config/chromium/Default`, put the file `History` in read only.
 
-## Replace the key ² with: \`:
-1. `xmodmap -pke > ~/.Xmodmap` > Create the key map
-2. `~/.Xmodmap` > Change 'twosuperior' with 'grave' (l49)
-3. `xmodmap ~/.Xmodmap` > and refresh
-
-## SSH
-Cache `ssh-agent ssh-add`
-
-`git config --global user.name "xandermann"`
-`git config --global user.email "contact@alexandre-hublau.com"`
-`git config --global branch.autosetuprebase always`
-
-
-# I3 mouse fix
+### I3 mouse fix
 
 	xinput --set-prop "DELL08AF:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 1
 
-___________________________________________________________
-
-## Package list:
-
-### Basic
-
-`Chromium keepassxc redshift-gtk sublime-text veracrypt`
-Font `fonts-firacode`
-
-	sudo apt install ttf-mscorefonts-installer
-
-### Dev
-
-`eclipse-java composer npm git ruby`
-+ LAMP `https://doc.ubuntu-fr.org/lamp`
-
-### See ?
-
-`flash-plugin` ?
-
-### I3WM
-* I3
-* I3 Gaps -> https://github.com/Airblader/i3
-* Rofi
-* Compton
-* lxappearance
-
-___________________________________________________________
-
-## FIXES:
 
 ### XPS
 
@@ -168,7 +139,7 @@ https://github.com/erpalma/throttled
 * Fix wifi:
 ```nmtui```
 
-#### The touchpad does not work:
+### The touchpad does not work:
 
 * Change in the grub,  l ~ 10:
 ```sudo nano /etc/default/grub```
@@ -200,10 +171,10 @@ ___________________________________________________________
 	exit;
 	sudo service mysql restart # restarts the mysql service
 
-# Bash not displayed
+### Bash not displayed
 
 	chsh -s /bin/bash
 
-# Hours
+### Time
 
 	sudo dpkg-reconfigure tzdata

@@ -12,9 +12,10 @@ ___________________________________________________________
 	usermod -aG sudo alex
 
 	# git
-	git config --global user.name "Alexandre Hublau"
-	git config --global user.email "alexandre.hublau@orange.com"
-	git config --global core.editor "nano"
+	git config --global user.name "Alexandre HUBLAU"
+	git config --global user.email "contact@alexandre-hublau.com"
+	# git config --global branch.autosetuprebase always
+	git config --global core.editor "vim"
 
 	# ssh
 	cp /mnt/c/Users/KGHB1518/.ssh ~/.ssh/

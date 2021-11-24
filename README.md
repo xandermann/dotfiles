@@ -79,24 +79,55 @@ ___________________________________________________________
 
 ## VPS
 
-```diff
-- WARNING: No swap limit support
-```
+### SWAP limit
 
 [https://ubuntuplace.info/questions/313645/docker-warning-no-swap-limit-support](https://ubuntuplace.info/questions/313645/docker-warning-no-swap-limit-support)
 
-	You can enable these capabilities on Ubuntu or Debian by following these instructions. Memory and swap accounting incur an overhead of about 1% of the total available memory and a 10% overall performance degradation, even if Docker is not running.
+```diff
++ docker info
+- WARNING: No swap limit support
 
-	1) Log into the Ubuntu or Debian host as a user with sudo privileges.
+1) Log into the Ubuntu or Debian host as a user with sudo privileges.
 
-	2) Edit the /etc/default/grub file. Add or edit the GRUB_CMDLINE_LINUX line to add the following two key-value pairs:
+2) Edit the /etc/default/grub file. Add or edit the GRUB_CMDLINE_LINUX line to add the following two key-value pairs:
 
-	GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
+GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
 
-	3) Update GRUB.
+3) Update GRUB.
+$ sudo update-grub
+```
 
-	$ sudo update-grub
+### Clean for free space
 
+```
+# 0 * * * * apt update && apt upgrade -y
+0 * * * * find /tmp -type f -atime +10 -delete
+0 * * * * find /var/log/ -type f -regex '.*\.[0-9]+\.gz$' -delete
+# 0 * * * * docker system prune -af --volumes
+0 * * * * apt-get autoclean
+0 * * * * apt-get clean
+0 * * * * apt-get autoremove --purge
+0 * * * * apt-get autoremove
+0 * * * * journalctl --vacuum-time=3d
+```
+
+```
+#!/bin/bash
+# Removes old revisions of snaps
+# CLOSE ALL SNAPS BEFORE RUNNING THIS
+# set -eu
+# snap list --all | awk '/disabled/{print $1, $3}' |
+    # while read snapname revision; do
+        # snap remove "$snapname" --revision="$revision"
+    # done
+```
+
+
+___________________________________________________________
+___________________________________________________________
+___________________________________________________________
+___________________________________________________________
+___________________________________________________________
 ___________________________________________________________
 ___________________________________________________________
 ___________________________________________________________

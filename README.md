@@ -18,7 +18,7 @@ ___________________________________________________________
 	git config --global core.editor "vim"
 
 	# ssh
-	cp /mnt/c/Users/KGHB1518/.ssh ~/.ssh/
+	cp /mnt/c/Users/$USER/.ssh ~/.ssh/
 	chmod 600 ~/.ssh/id_rsa
 
 	# docker

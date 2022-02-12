@@ -134,6 +134,25 @@ ___________________________________________________________
 ___________________________________________________________
 ___________________________________________________________
 
+## Linux cleans
+
+# 0 * * * * apt update && apt upgrade -y
+0 6 * * * find /tmp -type f -atime +10 -delete
+0 6 * * * find /var/log/ -type f -regex '.*\.[0-9]+\.gz$' -delete
+0 6 * * * docker builder prune -f
+# 0 * * * * docker system prune -af --volumes
+0 6 * * * apt-get autoclean
+0 6 * * * apt-get clean
+0 6 * * * apt-get autoremove --purge
+0 6 * * * apt-get autoremove
+0 6 * * * journalctl --vacuum-time=3d
+
+## Generate ACME (old)
+
+# 0 5 1 * * docker container run -ti -v /home/alex/ENV/letsencrypt:/etc/letsencrypt certbot/certbot certonly --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory --manual-public-ip-logging-ok -d '*.alexandre-hublau.com' -d alexandre-hublau.com
+
+(not clean because we generate for `*.alexandre-hublau.com`)
+
 ## FIXES
 
 ### Umask

@@ -103,26 +103,16 @@ $ sudo update-grub
 # 0 * * * * apt update && apt upgrade -y
 0 * * * * find /tmp -type f -atime +10 -delete
 0 * * * * find /var/log/ -type f -regex '.*\.[0-9]+\.gz$' -delete
+0 6 * * * docker builder prune -f
 # 0 * * * * docker system prune -af --volumes
 0 * * * * apt-get autoclean
 0 * * * * apt-get clean
 0 * * * * apt-get autoremove --purge
 0 * * * * apt-get autoremove
 0 * * * * journalctl --vacuum-time=3d
+
+# 0 6 * * *  sudo snap set system refresh.retain=2
 ```
-
-```
-#!/bin/bash
-# Removes old revisions of snaps
-# CLOSE ALL SNAPS BEFORE RUNNING THIS
-# set -eu
-# snap list --all | awk '/disabled/{print $1, $3}' |
-    # while read snapname revision; do
-        # snap remove "$snapname" --revision="$revision"
-    # done
-```
-
-
 ___________________________________________________________
 ___________________________________________________________
 ___________________________________________________________
@@ -133,19 +123,6 @@ ___________________________________________________________
 ___________________________________________________________
 ___________________________________________________________
 ___________________________________________________________
-
-## Linux cleans
-
-# 0 * * * * apt update && apt upgrade -y
-0 6 * * * find /tmp -type f -atime +10 -delete
-0 6 * * * find /var/log/ -type f -regex '.*\.[0-9]+\.gz$' -delete
-0 6 * * * docker builder prune -f
-# 0 * * * * docker system prune -af --volumes
-0 6 * * * apt-get autoclean
-0 6 * * * apt-get clean
-0 6 * * * apt-get autoremove --purge
-0 6 * * * apt-get autoremove
-0 6 * * * journalctl --vacuum-time=3d
 
 ## Generate ACME (old)
 

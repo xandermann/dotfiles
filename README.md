@@ -107,17 +107,17 @@ $ sudo update-grub
 0 6 * * * find /var/log/ -type f -regex '.*\.[0-9]+\.gz$' -delete
 
 # DOCKER CLEAN
-0 6 * * * docker builder prune -f ; \
-0 6 * * * docker rmi $(docker images -f "dangling=true" -q) ; \
+0 6 * * * docker builder prune -f
+0 6 * * * docker rmi $(docker images -f "dangling=true" -q)
 0 6 * * * docker rm $(docker ps -a -q)
 # 0 * * * * docker system prune -af --volumes
 
 # APT CLEAN
-0 6 * * * apt-get autoclean ; \
-0 6 * * * apt-get clean ; \
-0 6 * * * apt-get autoremove --purge ; \
-0 6 * * * apt-get autoremove ; \
-0 6 * * * journalctl --vacuum-time=3d ; \
+0 6 * * * apt-get autoclean
+0 6 * * * apt-get clean
+0 6 * * * apt-get autoremove --purge
+0 6 * * * apt-get autoremove
+0 6 * * * journalctl --vacuum-time=3d
 0 6 * * * sudo snap set system refresh.retain=2
 ```
 ___________________________________________________________

@@ -124,7 +124,7 @@ ___________________________________________________________
 
 ## Generate ACME (old)
 
-# 0 5 1 * * docker container run -ti -v /home/alex/ENV/letsencrypt:/etc/letsencrypt certbot/certbot certonly --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory --manual-public-ip-logging-ok -d '*.alexandre-hublau.com' -d alexandre-hublau.com
+	# 0 5 1 * * docker container run -ti -v /home/alex/ENV/letsencrypt:/etc/letsencrypt certbot/certbot certonly --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory --manual-public-ip-logging-ok -d '*.alexandre-hublau.com' -d alexandre-hublau.com
 
 (not clean because we generate for `*.alexandre-hublau.com`)
 

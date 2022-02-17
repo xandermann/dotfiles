@@ -36,6 +36,48 @@ ___________________________________________________________
 	sudo apt install zsh -y
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	# sudo vim /etc/passwd  <-- to change default shell, but perhaps `chsh` can do it too ! Actually OMZSH do it for you
+	# Add gpg plugin, OR export "GPG_TTY=$(tty)"
+	plugins=(git sudo tmux docker docker-compose gpg-agent)
+	
+	alias c='batcat'
+	alias v='vim'
+
+	alias a='git add .'
+	alias s='git status'
+	alias cm='git commit -m '
+	alias pu='git pull'
+	alias diff='git diff'
+	alias gclean='git branch | grep -v "master" | xargs git branch -d; git fetch --prune'
+
+	alias ..='cd ../'
+	alias ...='cd ../../'
+	alias ....='cd ../../../'
+	alias .....='cd ../../../../'
+	alias ......='cd ../../../../../'
+	alias .......='cd ../../../../../../'
+	alias rm="rm -i"
+
+	alias dr='docker run --rm -ti'
+	alias dka='docker kill $(docker ps -q)'
+	alias drm='docker rmi $(docker images -f "dangling=true" -q) ; docker rm $(docker ps -a -q)'
+	alias dri='docker rmi $(docker images -f "dangling=true" -q)'
+	# alias dri='docker rmi $(docker images -q) --force'
+	alias dra='docker system prune -af --volumes'
+	alias dp='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
+
+	alias dc='docker-compose'
+	alias dcu='docker-compose up -d'
+	alias dcd='docker-compose down'
+
+	alias e="docker exec -ti"
+
+	# alias m='docker run --rm -ti -v /tmp/m:/m_save_volume -w /m_save_volume -p 8000:8000 -p 19000-19020:19000-19020 alpine'
+
+	alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+	export PNPM_HOME="/home/alex/.local/share/pnpm"
+	export PATH="$PNPM_HOME:$PATH"
+	export PATH="/home/alex/.local/bin:$PATH"
 
 ## Drafts
 

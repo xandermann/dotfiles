@@ -25,7 +25,7 @@ ___________________________________________________________
 	sudo apt instal docker.io docker-compose -y
 	sudo groupadd docker
 	sudo usermod -aG docker $USER
-	newgrp docker 
+	newgrp docker
 
 	# vim
 	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -38,7 +38,7 @@ ___________________________________________________________
 	# sudo vim /etc/passwd  <-- to change default shell, but perhaps `chsh` can do it too ! Actually OMZSH do it for you
 	# Add gpg plugin, OR export "GPG_TTY=$(tty)"
 	plugins=(git sudo tmux docker docker-compose gpg-agent)
-	
+
 	alias c='batcat'
 	alias v='vim'
 
@@ -78,18 +78,19 @@ ___________________________________________________________
 	export PNPM_HOME="/home/alex/.local/share/pnpm"
 	export PATH="$PNPM_HOME:$PATH"
 	export PATH="/home/alex/.local/bin:$PATH"
-	
+
 # ZSHRC
 
 export LC_ALL=en_US.UTF-8
 
+<!--
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/alex/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
+# Set name of the theme to load - if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -187,9 +188,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-
 # alias r='df -h /'
+-->
 
 alias c='batcat'
 alias v='vim'
@@ -240,7 +240,7 @@ export GPG_TTY=$(tty)
 	sudo npm cache clean -f
 	sudo npm install -g n
 	sudo n stable # sudo n latest
-	
+
 	sudo apt install chromium keepassxc redshift-gtk sublime-text veracrypt fonts-firacode ttf-mscorefonts-installer
 
 	@TODO
@@ -259,12 +259,12 @@ export GPG_TTY=$(tty)
 	lsblk
 	sudo systemctl enable fstrim.timer
 	systemctl status fstrim.timer
-	
+
 ## Keyboard
 
 	setxkbmap fr azerty
 	setxkbmap fr bepo
-		
+
 ## Replace the key ² with: \`:
 	xmodmap -pke > ~/.Xmodmap # Create the key map
 	~/.Xmodmap # Change 'twosuperior' with 'grave' (l49)

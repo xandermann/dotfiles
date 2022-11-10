@@ -396,3 +396,8 @@ ___________________________________________________________
 ### Time
 
 	sudo dpkg-reconfigure tzdata
+	
+### Click sound issue
+
+	echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
+

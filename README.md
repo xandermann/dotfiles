@@ -400,4 +400,5 @@ ___________________________________________________________
 ### Click sound issue
 
 	echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
+	# Found here : https://askubuntu.com/questions/175602/periodic-clicking-sound-from-pc-speaker
 

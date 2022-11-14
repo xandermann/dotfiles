@@ -400,5 +400,10 @@ ___________________________________________________________
 ### Click sound issue
 
 	echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
-	# Found here : https://askubuntu.com/questions/175602/periodic-clicking-sound-from-pc-speaker
+	# Found here : https://askubuntu.com/questions/175602/periodic-clicking-sound-from-pc-speaker & https://stackoverflow.com/questions/51434915/etc-rc-local-is-missing-from-my-headless-ubuntu-18-04
+	
+### Docker snap use
+
+	sudo snap stop docker
+
 

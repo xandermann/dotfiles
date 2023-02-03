@@ -16,6 +16,10 @@ ___________________________________________________________
 	git config --global user.email "contact@alexandre-hublau.com"
 	# git config --global branch.autosetuprebase always
 	git config --global core.editor "vim"
+	
+	# PHP
+	sudo apt install php-cgi && sudo apt install php
+	sudo apt install php-xml
 
 	# ssh
 	cp /mnt/c/Users/$USER/.ssh ~/.ssh/

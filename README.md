@@ -20,6 +20,7 @@ ___________________________________________________________
 	# PHP
 	sudo apt install php-cgi && sudo apt install php
 	sudo apt install php-xml
+	sudo apt-get install php-sqlite3
 
 	# ssh
 	cp /mnt/c/Users/$USER/.ssh ~/.ssh/

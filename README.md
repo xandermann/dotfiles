@@ -36,6 +36,7 @@ ___________________________________________________________
 	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
 	# imap jk <Esc>
+	sudo apt-get install vim-gtk # fix: allow yank to clipboard
 
 	# zsh
 	sudo apt install zsh -y

@@ -6,6 +6,11 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 set updatetime=300
 
+" https://github.com/junegunn/vim-plug
+call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
 " Ref: https://github.com/Chewie/dotfiles/blob/master/vim/.vimrc
 
 " 88

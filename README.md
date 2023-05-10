@@ -94,6 +94,8 @@ alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold bl
 
 ```
 export GPG_TTY=$(tty)
+export VISUAL=vim
+export EDITOR="$VISUAL"
 ```
 
 

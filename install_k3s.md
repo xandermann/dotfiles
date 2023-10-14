@@ -57,3 +57,11 @@ helm install \
   --create-namespace \
   --set installCRDs=true
 ```
+
+## Install Kubectx
+
+https://github.com/ahmetb/kubectx
+
+```bash
+sudo apt install kubectx
+```

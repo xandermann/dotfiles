@@ -44,3 +44,10 @@ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scrip
 chmod 700 get_helm.sh
 ./get_helm.sh
 ```
+
+// https://cert-manager.io/docs/installation/helm/#1-add-the-helm-repository
+
+```bash
+helm repo add jetstack https://charts.jetstack.io
+helm repo update
+```

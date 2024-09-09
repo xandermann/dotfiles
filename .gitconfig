@@ -1,30 +1,5 @@
-[user]
-	email = contact@alexandre-hublau.com
-	name = Alexandre HUBLAU
-[branch]
-	autosetupmerge = always
-
-[credential]
-  helper = xandermann
-[core]
-  editor = vim -c start
-  excludesfile = ~/.gitignore_global
-	hooksPath = /home/alex/git/hooks
-
-[alias]
-  s = status
-  aa = add .
-  cm = commit -a
-  amend = commit --amend
-  p = push
-  pu = pull
-
-  undo = git reset --soft HEAD^
-  who = shortlog -sne
-  oneline = log --pretty=oneline --abbrev-commit --graph --decorate
-
-
-[diff]
-compactionHeuristic = true
-[commit]
-	gpgsign = true
+  [init]
+    defaultBranch = main
+  [user]
+    name = Alexandre Hublau
+    email = contact@alexandre-hublau.com

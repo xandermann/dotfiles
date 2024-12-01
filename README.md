@@ -1,60 +1,56 @@
-___________________________________________________________
-
-# Ubuntu packages
-
-___________________________________________________________
-
-# Installation
+# Dotfiles
 
 ## Standard
 
-	date
-	sudo timedatectl set-timezone Europe/Paris
+```bash
+date
+sudo timedatectl set-timezone Europe/Paris
 
-	useradd alex
-	usermod -aG sudo alex
+useradd alex
+usermod -aG sudo alex
 
-	# git
-	git config --global user.name "Alexandre HUBLAU"
-	git config --global user.email "contact@alexandre-hublau.com"
-	# git config --global branch.autosetuprebase always
-	git config --global core.editor "vim"
-	
-	# PHP
-	sudo apt install php-cgi && sudo apt install php
-	sudo apt install php-xml
-	sudo apt-get install php-sqlite3
+# git
+git config --global user.name "Alexandre HUBLAU"
+git config --global user.email "contact@alexandre-hublau.com"
+# git config --global branch.autosetuprebase always
+git config --global core.editor "vim"
 
-	# ssh
-	cp /mnt/c/Users/$USER/.ssh ~/.ssh/
-	chmod 600 ~/.ssh/id_rsa
+# PHP
+sudo apt install php-cgi && sudo apt install php
+sudo apt install php-xml
+sudo apt-get install php-sqlite3
 
-	# docker
-	sudo apt instal docker.io docker-compose -y
-	sudo groupadd docker
-	sudo usermod -aG docker $USER
-	newgrp docker
+# ssh
+cp /mnt/c/Users/$USER/.ssh ~/.ssh/
+chmod 600 ~/.ssh/id_rsa
 
-	# vim
-	git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-	sh ~/.vim_runtime/install_awesome_vimrc.sh
-	# imap jk <Esc>
-	sudo apt-get install vim-gtk # fix: allow yank to clipboard
+# docker
+sudo apt instal docker.io docker-compose -y
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
 
-	# zsh
-	sudo apt install zsh -y
-	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	# sudo vim /etc/passwd  <-- to change default shell, but perhaps `chsh` can do it too ! Actually OMZSH do it for you
-	# Add gpg plugin, OR export "GPG_TTY=$(tty)"
-	plugins=(git sudo tmux docker docker-compose gpg-agent)
+# vim
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+# imap jk <Esc>
+sudo apt-get install vim-gtk # fix: allow yank to clipboard
 
-	export PNPM_HOME="/home/alex/.local/share/pnpm"
-	export PATH="$PNPM_HOME:$PATH"
-	export PATH="/home/alex/.local/bin:$PATH"
+# zsh
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# sudo vim /etc/passwd  <-- to change default shell, but perhaps `chsh` can do it too ! Actually OMZSH do it for you
+# Add gpg plugin, OR export "GPG_TTY=$(tty)"
+plugins=(git sudo tmux docker docker-compose gpg-agent)
+
+export PNPM_HOME="/home/alex/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+export PATH="/home/alex/.local/bin:$PATH"
+```
 
 # Alias
 
-```sh
+```bash
 alias c='batcat'
 alias v='vim'
 
@@ -92,7 +88,7 @@ alias e="docker exec -ti"
 alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 ```
 
-```
+```bash
 export GPG_TTY=$(tty)
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -267,12 +263,12 @@ ___________________________________________________________
 ### Time
 
 	sudo dpkg-reconfigure tzdata
-	
+
 ### Click sound issue
 
 	echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
 	# Found here : https://askubuntu.com/questions/175602/periodic-clicking-sound-from-pc-speaker & https://stackoverflow.com/questions/51434915/etc-rc-local-is-missing-from-my-headless-ubuntu-18-04
-	
+
 ### Docker snap use
 
 	sudo snap stop docker
@@ -280,24 +276,16 @@ ___________________________________________________________
 ### Gnome
 
 	gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews'
-	
-### Remove youtube shorts
 
 ```
-www.youtube.com##ytd-guide-renderer a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33c-.77-.32-1.2-.5-1.2-.5L18"]:upward(ytd-guide-entry-renderer)
-www.youtube.com##ytd-mini-guide-renderer a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33c-.77-.32-1.2-.5-1.2-.5L18"]:upward(ytd-mini-guide-entry-renderer)
-www.youtube.com##ytd-browse #dismissible ytd-rich-grid-slim-media[is-short]:upward(ytd-rich-section-renderer)
-www.youtube.com##ytd-browse[page-subtype="home"] .ytd-thumbnail[href^="/shorts/"]:upward(ytd-rich-item-renderer)
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] .ytd-thumbnail[href^="/shorts/"]:upward(ytd-grid-video-renderer)
-www.youtube.com##ytd-search .ytd-thumbnail[href^="/shorts/"]:upward(ytd-video-renderer)
-www.youtube.com##ytd-watch-next-secondary-results-renderer .ytd-thumbnail[href^="/shorts/"]:upward(ytd-compact-video-renderer,ytd-shelf-renderer)
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer .ytd-thumbnail[href^="/shorts/"]:upward(ytd-item-section-renderer)
-www.youtube.com##ytd-browse[page-subtype="channels"] #contents.ytd-reel-shelf-renderer:upward(ytd-item-section-renderer)
-www.youtube.com##ytd-search #contents ytd-reel-shelf-renderer
-m.youtube.com##ytm-reel-shelf-renderer
-m.youtube.com##ytm-pivot-bar-renderer div.pivot-shorts:upward(ytm-pivot-bar-item-renderer)
-m.youtube.com##ytm-browse ytm-item-section-renderer ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]:upward(ytm-video-with-context-renderer)
-m.youtube.com##ytm-browse ytm-item-section-renderer ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]:upward(ytm-compact-video-renderer)
-m.youtube.com##ytm-search ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]:upward(ytm-compact-video-renderer)
-m.youtube.com##ytm-single-column-watch-next-results-renderer ytm-thumbnail-overlay-time-status-renderer span:has-text(/^(0:\d\d|1:0\d)$/):upward(ytm-video-with-context-renderer)
+# Prevent Gnome-shell's Alt+Tab from grouping windows from similar apps
+
+    go to settings > devices > keyboard
+    look for the keyboard shortcut for "Switch windows"
+    set this to the shortcut Alt+Tab (this will overwrite the old shortcut)
+
+If you now press Alt+Tab you will be able to directly select all open windows without grouping into the different apps.
+
+https://superuser.com/questions/394376/how-to-prevent-gnome-shells-alttab-from-grouping-windows-from-similar-apps
 ```
+

@@ -48,6 +48,11 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH="/home/alex/.local/bin:$PATH"
 ```
 
+```bash
+flatpak install firefox
+flatpak install flathub org.freedesktop.Platform.ffmpeg-full
+```
+
 # Alias
 
 ```bash
